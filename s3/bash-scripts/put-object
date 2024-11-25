@@ -1,1 +1,12 @@
 #!/usr/bin/env bash
+
+output_dir="/tmp/s3-bash-scripts"
+
+mkdir -p $output_dir
+
+for ((i=1;i<=3;i++)); do
+    filename="$output_dir/file_$i.txt"
+    touch "$filename"
+done
+
+tree $output_dir
